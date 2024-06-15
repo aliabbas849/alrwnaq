@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المعروضات</title>
+  <link rel="stylesheet" href="css/style.css" />
+<script src="myFunctions.js"></script>
+</head>
+<body>
+  <!-- Start Header -->
+  <div class="header" id="header">
+    <div class="container">
+      <a href="#" class="logo">الرونق للعقارات</a>
+      <ul class="main-nav">
+        <li><a href="home.html">الصفحة الرسمية</a></li>
+        <li><a href="properties.html">صفحة العقارات</a></li>
+        <li><a href="aboutus.html">من نحن</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- INFO section -->
+  <form onsubmit="return goToPurchaseForm()">
+    <table>
+      <thead>
+        <tr>
+          <th>المدينة</th>
+          <th>تفاصيل العقار</th>
+          <th>الايجار بالشهر</th>
+          <th>معلومات</th>
+          <th>اتخاذ قرار الاختيار</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- تكرار الصفوف حسب البيانات -->
+<tr>
+          <td><strong>دمشق</strong></td>
+          <td><strong>ثلاث غرف</strong></td>
+<td><strong>15000</strong></td>
+<td><strong>تفاصيل اكثر</strong>
+<input type="checkbox" onchange="toggleDetails(this, 'details1')">
+<div id="details1" style="display:none;">
+  <p>test</p>
+</div></td>
+<td><strong><label><input type="radio" name="property" value="55">اختيار</label></strong></td>
+        </tr>
+<tr>
+          <td><strong>دمشق</strong></td>
+          <td><strong>ثلاث غرف</strong></td>
+<td><strong>15000</strong></td>
+<td><strong>تفاصيل اكثر</strong><input type="checkbox" onchange="toggleDetails(this, 'details2')"><div id="details2" style="display:none;">
+  <!-- المحتوى الذي تريد عرضه -->
+  <p>معلومات إضافية حول العقار...</p>
+</div></td>
+<td><strong><label><input type="radio" name="property" value="66">اختيار</label></strong></td>
+        </tr>
+<tr>
+          <td><strong>دمشق</strong></td>
+          <td><strong>ثلاث غرف</strong></td>
+<td><strong>15000</strong></td>
+<td><strong>تفاصيل اكثر</strong><input type="checkbox" onchange="toggleDetails(this, 'details1')"><div id="details1" style="display:none;">
+  <!-- المحتوى الذي تريد عرضه -->
+  <p>معلومات إضافية حول العقار...</p>
+</div></td>
+<td><strong><label><input type="radio" name="property" value="77">اختيار</label></strong></td>
+        </tr>
+<tr>
+          <td><strong>دمشق</strong></td>
+          <td><strong>ثلاث غرف</strong></td>
+<td><strong>15000</strong></td>
+<td><strong>تفاصيل اكثر</strong><input type="checkbox" onchange="toggleDetails(this, 'details1')"><div id="details1" style="display:none;">
+  <!-- المحتوى الذي تريد عرضه -->
+  <p>معلومات إضافية حول العقار...</p>
+</div></td>
+<td><strong><label><input type="radio" name="property" value="77">اختيار</label></strong></td>
+        </tr>
+<tr>
+          <td><strong>دمشق</strong></td>
+          <td><strong>ثلاث غرف</strong></td>
+<td><strong>15000</strong></td>
+<td><strong>تفاصيل اكثر</strong><input type="checkbox" onchange="toggleDetails(this, 'details1')"><div id="details1" style="display:none;">
+  <!-- المحتوى الذي تريد عرضه -->
+  <p>معلومات إضافية حول العقار...</p>
+</div></td>
+<td><strong><label><input type="radio" name="property" value="77">اختيار</label></strong></td>
+        </tr>
+<tr>
+          <td><strong>دمشق</strong></td>
+          <td><strong>ثلاث غرف</strong></td>
+<td><strong>15000</strong></td>
+<td><strong>تفاصيل اكثر</strong><input type="checkbox" onchange="toggleDetails(this, 'details1')"><div id="details1" style="display:none;">
+  <!-- المحتوى الذي تريد عرضه -->
+  <p>معلومات إضافية حول العقار...</p>
+</div></td>
+<td><strong><label><input type="radio" name="property" value="77">اختيار</label></strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="submit">متابعة</button>
+  </form>
+
+  <div id="purchaseForm" style="display:none;">
+     <form><pre>
+<label for="fullName">الاسم الكامل:</label><input type="text" id="fullName" name="fullName" pattern="[أ-ي\s]+" required>
+
+<label for="nationalId">الرقم الوطني:</label><input type="text" id="nationalId" name="nationalId" pattern="\d{11,}" required>
+
+<label for="birthDate">تاريخ الولادة:</label><input type="date" id="birthDate" name="birthDate" required>
+
+<label for="mobileNumber">رقم الموبايل:</label><input type="tel" id="mobileNumber" name="mobileNumber" pattern="09\d{8}" required>
+
+<label for="email">البريد الإلكتروني:</label><input type="email" id="email" name="email">
+
+                       <input type="button" value="إرسال" onclick="submitForm()">
+
+
+
+
+</pre>
+</form>
+  </div>
+
+</body>
+</html>
